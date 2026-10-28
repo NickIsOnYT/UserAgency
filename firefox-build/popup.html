@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User-Agent Switcher</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="top-row">
+        <h1>User-Agent Switcher</h1>
+        <div class="top-actions">
+          <label class="theme-toggle" title="Dark mode">
+            <input id="dark-mode" type="checkbox">
+            <span>Dark</span>
+          </label>
+          <button id="open-settings" class="icon-button" type="button" aria-label="Open settings" title="Settings">⚙</button>
+        </div>
+      </header>
+
+      <label class="toggle-row" for="enabled">
+        <span>
+          <strong>Override request User-Agent for this site</strong>
+          <small id="status">Off</small>
+        </span>
+        <input id="enabled" type="checkbox" role="switch">
+      </label>
+
+      <label class="toggle-row" for="spoof-navigator">
+        <span>
+          <strong>Override webpage User-Agent for this site</strong>
+          <small id="spoof-status">Off</small>
+        </span>
+        <input id="spoof-navigator" type="checkbox" role="switch">
+      </label>
+      <p id="scope-status" class="note" role="status" aria-live="polite">Overrides are controlled per site. The allow list sets each site's default state.</p>
+
+      <label class="field-label" for="preset">User-Agent preset</label>
+      <select id="preset">
+        <option value="chrome-windows">Chrome on Windows</option>
+        <option value="chrome-mac">Chrome on macOS</option>
+        <option value="firefox-windows">Firefox on Windows</option>
+        <option value="firefox-mac">Firefox on macOS</option>
+        <option value="chrome-android">Chrome on Android</option>
+        <option value="safari-iphone">Safari on iPhone</option>
+        <option value="safari-ipad">Safari on iPad</option>
+        <option value="custom">Custom User-Agent</option>
+      </select>
+
+      <div id="custom-section" hidden>
+        <label class="field-label" for="custom-user-agent">Custom User-Agent string</label>
+        <textarea id="custom-user-agent" rows="3" placeholder="Paste a User-Agent string"></textarea>
+        <button id="apply-custom" type="button">Apply custom string</button>
+      </div>
+
+      <p class="note">The webpage override changes navigator.userAgent only; User-Agent Client Hints are unchanged. Reload open pages after changing presets.</p>
+      <p id="message" role="status" aria-live="polite"></p>
+    </main>
+    <script src="presets.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

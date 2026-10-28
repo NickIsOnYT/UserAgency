@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User-Agent Switcher Settings</title>
+    <link rel="stylesheet" href="settings.css">
+  </head>
+  <body>
+    <main class="settings">
+      <header class="page-header">
+        <div>
+          <h1>User-Agent Switcher Settings</h1>
+          <p>Configure which sites use the override and manage your presets.</p>
+        </div>
+        <label class="theme-toggle">
+          <input id="dark-mode" type="checkbox">
+          <span>Dark mode</span>
+        </label>
+      </header>
+
+      <section class="card" aria-labelledby="allow-list-heading">
+        <h2 id="allow-list-heading">Website allow list</h2>
+        <p>Domains match the current tab and requests it initiates, including direct requests to third-party hosts. Subdomains are included automatically. Add a domain such as <code>example.com</code>. A non-empty list turns both overrides on by default for matching sites; invert the list to turn them on everywhere except listed domains. The popup switches are saved per site and can override that site's default.</p>
+
+        <form id="domain-form" class="inline-form">
+          <label class="visually-hidden" for="domain-input">Domain</label>
+          <input id="domain-input" type="text" placeholder="example.com" autocomplete="off">
+          <button type="submit">Add domain</button>
+        </form>
+
+        <label class="check-row" for="invert-allow-list">
+          <input id="invert-allow-list" type="checkbox">
+          <span>Invert list (use the User-Agent everywhere except these domains)</span>
+        </label>
+        <ul id="domain-list" class="item-list"></ul>
+        <p id="domain-empty" class="muted">No domains added. With an empty list, overrides default to off on every site and can be turned on individually from the popup.</p>
+      </section>
+
+      <section class="card" aria-labelledby="presets-heading">
+        <h2 id="presets-heading">User-Agent presets</h2>
+        <label class="check-row" for="hide-default-presets">
+          <input id="hide-default-presets" type="checkbox">
+          <span>Hide built-in presets in the popup</span>
+        </label>
+
+        <h3>Default browser User-Agent</h3>
+        <p class="muted">This is the User-Agent exposed by this extension page in your current browser.</p>
+        <pre id="default-user-agent" class="user-agent-value"></pre>
+
+        <h3>Add a custom preset</h3>
+        <form id="preset-form" class="preset-form">
+          <label for="preset-name">Preset name</label>
+          <input id="preset-name" type="text" maxlength="60" placeholder="My test browser" required>
+          <label for="preset-user-agent">User-Agent string</label>
+          <textarea id="preset-user-agent" rows="3" placeholder="Paste a User-Agent string" required></textarea>
+          <button type="submit">Save preset</button>
+        </form>
+        <ul id="preset-list" class="item-list"></ul>
+        <p id="preset-empty" class="muted">No custom presets saved.</p>
+      </section>
+      <p id="message" role="status" aria-live="polite"></p>
+    </main>
+    <script src="settings.js"></script>
+  </body>
+</html>

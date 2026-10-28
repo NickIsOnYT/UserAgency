@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 380px;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  color: #202124;
+  background: #fff;
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+body.dark-mode {
+  color: #f1f3f4;
+  background: #303134;
+}
+
+main {
+  padding: 16px;
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.theme-toggle input {
+  margin: 0;
+  accent-color: #1a73e8;
+}
+
+.icon-button {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  font-size: 19px;
+}
+
+.icon-button:hover {
+  background: #e8eaed;
+}
+
+.dark-mode .icon-button:hover {
+  background: #5f6368;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.toggle-row span {
+  display: grid;
+  gap: 2px;
+}
+
+.toggle-row small,
+.note {
+  color: #5f6368;
+}
+
+.toggle-row small {
+  max-width: 290px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1a73e8;
+}
+
+.field-label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+select,
+textarea,
+button {
+  width: 100%;
+  font: inherit;
+}
+
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: #fff;
+  color: #202124;
+}
+
+.dark-mode select,
+.dark-mode textarea {
+  border-color: #5f6368;
+  color: #f1f3f4;
+  background: #3c4043;
+}
+
+.dark-mode .toggle-row small,
+.dark-mode .note {
+  color: #bdc1c6;
+}
+
+.dark-mode #message {
+  color: #f28b82;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: #1a73e8;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1765cc;
+}
+
+.note {
+  margin: 14px 0 0;
+  font-size: 12px;
+}
+
+#message {
+  min-height: 18px;
+  margin: 6px 0 0;
+  color: #b3261e;
+  font-size: 12px;
+}
