@@ -11,6 +11,7 @@ The extension requests access to all sites so it can apply the chosen header and
 | [Waterfox 6.7.7](https://www.waterfox.com/) | Works | v2.1|
 |[Waterfox for Android 1.2.10](https://play.google.com/store/apps/details?id=net.waterfox.android.release)|Works|v2.1|
 
+AI disclosure: this extension is completely programmed by AI (Github Copilot in VS Code)
 
 ## Load in Chrome
 
