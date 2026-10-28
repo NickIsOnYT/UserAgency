@@ -25,7 +25,7 @@ The extension requests access to all sites so it can apply the chosen header and
 3. Run `.\build-firefox.ps1` from this folder.
 4. Select `firefox-build\manifest.json`.
 
-Firefox's temporary add-on is removed when the browser closes. To install it indefinitely please scroll below the `Use in Waterfox for Android` section
+Firefox's temporary add-on is removed when the browser closes. To install it indefinitely please scroll below the `Load in Waterfox for Android` section
 
 ## Load in Waterfox (does not require signing)
 
@@ -35,7 +35,7 @@ Firefox's temporary add-on is removed when the browser closes. To install it ind
 4. Zip the contents of the `firefox-build` folder.
 5. Select the zip file in Waterfox.
 
-## Use in Firefox for Android (untested)
+## Load in Firefox for Android (untested)
 
 1. Run `.\build-firefox.ps1`,
 2. Connect the device with USB debugging enabled. 
@@ -43,15 +43,15 @@ Firefox's temporary add-on is removed when the browser closes. To install it ind
 
 Open the extension from Firefox's Extensions menu to change the preset or toggles. Open **Settings** from the popup to configure domains, presets, or display preferences. Reload open pages after changing presets.
 
-## Use in Waterfox for Android (doesn't require signing)
+## Load in Waterfox for Android (doesn't require signing)
 
 1. Run `.\build-firefox.ps1`.
-2. Zip the contents of the `firefox-build` folder  
-.
+2. Zip the contents of the `firefox-build` folder.
 3. Transfer the zip file to your phone.
-4. Open the `about:config` page
+4. Open the `about:config` page.
 2. Search for: `xpinstall.signatures.required` & `extensions.langpacks.signatures.required` and toggle the settings to False. 
-3. Open settings and click `install extension from file`, find the zip file you transfered to your phone and import it
+3. Open settings and click `install extension from file`, find the zip file you transfered to your phone and import it.
+
 pen the extension from Firefox's Extensions menu to change the preset or toggles. Open **Settings** from the popup to configure domains, presets, or display preferences. Reload open pages after changing presets.
 
 ## Advanced section for Firefox users
