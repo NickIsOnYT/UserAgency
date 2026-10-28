@@ -21,11 +21,20 @@
 
       <label class="toggle-row" for="enabled">
         <span>
-          <strong>Override User-Agent</strong>
+          <strong>Override request User-Agent for this site</strong>
           <small id="status">Off</small>
         </span>
         <input id="enabled" type="checkbox" role="switch">
       </label>
+
+      <label class="toggle-row" for="spoof-navigator">
+        <span>
+          <strong>Override webpage User-Agent for this site</strong>
+          <small id="spoof-status">Off</small>
+        </span>
+        <input id="spoof-navigator" type="checkbox" role="switch">
+      </label>
+      <p id="scope-status" class="note" role="status" aria-live="polite">Overrides are controlled per site. The allow list sets each site's default state.</p>
 
       <label class="field-label" for="preset">User-Agent preset</label>
       <select id="preset">
@@ -45,7 +54,7 @@
         <button id="apply-custom" type="button">Apply custom string</button>
       </div>
 
-      <p class="note">Applies to HTTP and HTTPS requests. Some websites may need to be reloaded.</p>
+      <p class="note">The webpage override changes navigator.userAgent only; User-Agent Client Hints are unchanged. Reload open pages after changing presets.</p>
       <p id="message" role="status" aria-live="polite"></p>
     </main>
     <script src="presets.js"></script>

@@ -91,6 +91,10 @@ h1 {
   color: #5f6368;
 }
 
+.toggle-row small {
+  max-width: 290px;
+}
+
 input[type="checkbox"] {
   width: 18px;
   height: 18px;

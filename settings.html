@@ -21,7 +21,7 @@
 
       <section class="card" aria-labelledby="allow-list-heading">
         <h2 id="allow-list-heading">Website allow list</h2>
-        <p>Domains match the current tab and requests it initiates, including direct requests to third-party hosts. Subdomains are included automatically. Add a domain such as <code>example.com</code>.</p>
+        <p>Domains match the current tab and requests it initiates, including direct requests to third-party hosts. Subdomains are included automatically. Add a domain such as <code>example.com</code>. A non-empty list turns both overrides on by default for matching sites; invert the list to turn them on everywhere except listed domains. The popup switches are saved per site and can override that site's default.</p>
 
         <form id="domain-form" class="inline-form">
           <label class="visually-hidden" for="domain-input">Domain</label>
@@ -34,7 +34,7 @@
           <span>Invert list (use the User-Agent everywhere except these domains)</span>
         </label>
         <ul id="domain-list" class="item-list"></ul>
-        <p id="domain-empty" class="muted">No domains added. With an empty list, the main on/off switch applies everywhere.</p>
+        <p id="domain-empty" class="muted">No domains added. With an empty list, overrides default to off on every site and can be turned on individually from the popup.</p>
       </section>
 
       <section class="card" aria-labelledby="presets-heading">
