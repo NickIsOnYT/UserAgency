@@ -22,15 +22,15 @@ The extension requests access to all sites so it can apply the chosen header and
 
 1. Open `about:debugging#/runtime/this-firefox`.
 2. Choose **Load Temporary Add-on…**.
-3. Run `.\build-firefox.ps1` from this folder.
+3. Run `build-firefox.ps1` from this folder.
 4. Select `firefox-build\manifest.json`.
 
-Firefox's temporary add-on is removed when the browser closes. To install it indefinitely please scroll below the `Load in Waterfox for Android` section
+Firefox's temporary add-on is removed when the browser closes. To install it indefinitely please scroll to the **Advanced section for Firefox users** section
 
 ## Load in Waterfox (does not require signing)
 
 1. Open `about:addons`.
-2. Click the small cog, then `install addon from file`.
+2. Click the small cog, then **install addon from file**.
 3. Run `.\build-firefox.ps1` from this folder.
 4. Zip the contents of the `firefox-build` folder.
 5. Select the zip file in Waterfox.
@@ -60,7 +60,7 @@ pen the extension from Firefox's Extensions menu to change the preset or toggles
 1. Open the `about:config` page
 2. Search for: `xpinstall.signatures.required` & `extensions.langpacks.signatures.required` and toggle the settings to False. 
 3. Open `about:addons`.
-2. Click the small cog, then `install addon from file`.
+2. Click the small cog, then **install addon from file**.
 3. Run `.\build-firefox.ps1` from this folder.
 4. Zip the contents of the `firefox-build` folder.
 5. Select the zip file in Firefox.
