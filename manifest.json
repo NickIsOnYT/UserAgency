@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "User-Agent Switcher",
-  "version": "1.0.0",
-  "description": "Switch your browser's User-Agent for testing websites.",
+  "name": "UserAgency",
+  "version": "2.1.0",
+  "description": "Switch your browser's User-Agent.",
   "permissions": [
     "storage",
     "declarativeNetRequest"
@@ -35,7 +35,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "User-Agent Switcher",
+    "default_title": "UserAgency",
     "default_popup": "popup.html"
   },
   "options_ui": {

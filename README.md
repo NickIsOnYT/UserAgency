@@ -1,4 +1,4 @@
-# User-Agent Switcher
+# UserAgency
 
 A basic Manifest V3 extension for Chrome and Firefox. Choose a desktop or mobile preset, enter a custom User-Agent, and use the toolbar popup to enable either override for the current site. The request-header override changes HTTP and HTTPS requests. The separate webpage override changes `navigator.userAgent` on matching pages.
 
@@ -6,10 +6,10 @@ The extension requests access to all sites so it can apply the chosen header and
 
 | Tested on | Status | Extension version |
 |-|-|-|
-| [Google Chrome 156.0.8078.74](https://www.google.com/chrome/) | Works | v2.0 |
-| [Mozilla Firefox 159.0](https://www.firefox.com/) | Works | v2.0 |
-| [Waterfox 6.7.7](https://www.waterfox.com/) | Works | v2.0 |
-|[Waterfox for Android 1.2.10](https://play.google.com/store/apps/details?id=net.waterfox.android.release)|Works|v2.0|
+| [Google Chrome 156.0.8078.74](https://www.google.com/chrome/) | Works | v2.1 |
+| [Mozilla Firefox 159.0](https://www.firefox.com/) | Works | v2.1|
+| [Waterfox 6.7.7](https://www.waterfox.com/) | Works | v2.1|
+|[Waterfox for Android 1.2.10](https://play.google.com/store/apps/details?id=net.waterfox.android.release)|Works|v2.1|
 
 
 ## Load in Chrome
